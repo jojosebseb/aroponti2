@@ -39,8 +39,74 @@ $container-width: 1000px;
     li{
       display: inline-block;
       font-size: 18px;
+      position: relative;
     }
   }
+  .language-drop{
+    position: absolute;
+    left: 0;
+    bottom: -125px;
+    display: none;
+    opacity: 0;
+    transition: all .3s ease;
+    // z-index: -99;s
+
+    ul{
+      background: #8e181d;
+      display: block;
+      width: 105%;
+      padding: 10px;
+    }
+    li{
+
+      font-size: 16px;
+      padding: 5px;
+      cursor: pointer;
+
+    }
+    li:hover{
+      text-decoration: underline;
+    }
+  }
+  .language-drop.active{
+    display: block;
+    bottom: -85px;
+    opacity: 1;
+    ul{
+      // background:
+
+    }
+    li{
+      display: block;
+    }
+  }
+}
+.language-handle{
+  cursor: pointer;
+}
+.language-handle:after{
+  content: "";
+  width: 5px;
+  height: 5px;
+  border-right: 2px solid white;
+  border-bottom: 2px solid white;
+  display: block;
+  position: absolute;
+  right: -15px;
+  top: 50%;
+  transform: translateY(-50%) rotateZ(45deg);
+}
+.language-handle.active:after{
+  content: "";
+  width: 5px;
+  height: 5px;
+  border-right: 2px solid white;
+  border-bottom: 2px solid white;
+  display: block;
+  position: absolute;
+  right: -15px;
+  top: 50%;
+  transform: translateY(-50%) rotateZ(-90deg);
 }
 //navbar
 
@@ -94,15 +160,30 @@ $main-gold: #9b8349;
   .welcome-paragraph{
     height: 500px;
     width: 500px;
-    background-image: url('../img/global/marbl.png');
+    // background-image: url('../img/global/marbl.png');welcome-paragraph
     border-radius: 50%;
     background-position: center center;
     background-size: contain;
-    padding: 5% 75px;
+    // padding: 5% 75px;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    .bubble-wrapper{
+      height: 500px;
+      width: 500px;
+      // background-image: url('../img/global/marbl.png');welcome-paragraph
+      border-radius: 50%;
+      background-position: center center;
+      background-size: contain;
+      padding: 20% 75px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      z-index: 99;
+      transform: translate(-50%, -50%);
+      background-image: url('../img/global/marbl.png');
+    }
   }
   .contact-btn{
     width: 100px;
@@ -139,7 +220,7 @@ $main-gold: #9b8349;
     bottom: -20%;
     left: -33%;
     transform-origin: right top;
-    z-index: 5;
+    z-index: 100;
   }
   .white-wave{
     position: absolute;
@@ -159,10 +240,25 @@ $main-gold: #9b8349;
     left: -57%;
     z-index: 2;
   }
+  .welcome-weed{
+    position: absolute;
+    bottom: 0;
+    left: 315px;
+    z-index: -1;
+    opacity: 0.6;
+    filter: contrast(200%);
+  }
 }
 
 #gallery{
   background-image: url('../img/global/section-bg.png');
+  .overlap-arwana{
+    position: absolute;
+    bottom: -150px;
+    right: 0;
+    z-index: 5;
+    width: 27vw;
+  }
   .section-title{
     text-align: center;
     margin-bottom: 90px;
@@ -228,11 +324,41 @@ $main-gold: #9b8349;
     bottom: 18%;
     left: 0;
     height: 280px;
+    z-index: 5;
+  }
+  .side-weed{
+    position: absolute;
+    bottom: -250px;
+    z-index: 5;
+    right: 0;
+    // height: 280px;
   }
 }
 
 #contact{
   background-image: url('../img/global/section-bg.png');
+  .contact-arwana{
+    position: absolute;
+    z-index: 5;
+    right: 0;
+    bottom: 20px;
+    width: 28vw;
+  }
+  .contact-weed{
+    position: absolute;
+    z-index: 5;
+    left: 0;
+    bottom: 0px;
+    width: 28vw;
+  }
+  .contact-weed-2{
+    position: absolute;
+    z-index: 5;
+    right: 0;
+    bottom: 0px;
+    width: 28vw;
+  }
+
   .section-title{
     text-align: center;
     margin-bottom: 30px;
