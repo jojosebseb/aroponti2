@@ -27,7 +27,7 @@ $container-width: 1000px;
   width: 100%;
   top: 0;
   left: 0;
-  padding: 20px 0;
+  padding: 30px 0;
   z-index: 99;
   color: white;
   ul{
@@ -80,6 +80,11 @@ $container-width: 1000px;
       display: block;
     }
   }
+}
+.logo-container{
+  position: fixed;
+  top: 20px;
+  left: 20px;
 }
 .language-handle{
   cursor: pointer;

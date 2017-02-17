@@ -18,5 +18,6 @@ $('.language-handle').on('click', function(){
 })
 
 $('.mobile-handle').on('click', function(){
+  $(this).toggleClass('active');
   $('.navigation').toggleClass('active');
 })

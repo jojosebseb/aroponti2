@@ -56,12 +56,12 @@ $container-width: 300px;
     background: #87151a;
     position: fixed;
     width: 100%;
-    top: 80px;
+    top: 60px;
     left: 0;
   }
   ul{
     text-align: left;
-    padding: 10px;
+    padding: 10px 30px;
     // display: flex;
     justify-content: space-between;
     // width: 70%;
@@ -84,9 +84,24 @@ $container-width: 300px;
     border-radius: 10px;
     margin: 4px 2px;
     border: 2px solid white;
+    transition: all .3s ease;
+    position: relative;
+    top: 0;
   }
 }
 .mobile-handle.active{
+  #line1{
+    transform: rotateZ(-45deg);
+    top: 8px;
+  }
+  #line2{
+    transform: rotateZ(45deg);
+    opacity: 0;
+  }
+  #line3{
+    transform: rotateZ(45deg);
+    top: -8px;
+  }
 
 }
 .language-drop{
@@ -133,13 +148,13 @@ $container-width: 300px;
 }
 .language-handle:after{
   content: "";
-  width: 5px;
-  height: 5px;
+  width: 3px;
+  height: 3px;
   border-right: 2px solid white;
   border-bottom: 2px solid white;
   display: block;
   position: absolute;
-  left: 105px;
+  left: 63px;
   top: 50%;
   transform: translateY(-50%) rotateZ(45deg);
 }
