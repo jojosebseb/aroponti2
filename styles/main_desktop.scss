@@ -27,9 +27,14 @@ $container-width: 1000px;
   width: 100%;
   top: 0;
   left: 0;
-  padding: 30px 0;
+  padding: 53px 0;
   z-index: 99;
   color: white;
+  background-size: cover;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-image: url('../img/global/top-banner.png');
   ul{
     text-align: center;
     display: flex;
@@ -127,18 +132,18 @@ $main-gold: #9b8349;
   background-size: cover;
   position: relative;
 }
-.section-container:before{
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 140px;
-  background-size: cover;
-  width: 100%;
-  background-repeat: no-repeat;
-
-  background-image: url('../img/global/top-banner.png');
-}
+// .section-container:before{
+//   content: "";
+//   position: absolute;
+//   top: 0;
+//   left: 0;
+//   height: 140px;
+//   background-size: cover;
+//   width: 100%;
+//   background-repeat: no-repeat;
+//
+//   background-image: url('../img/global/top-banner.png');
+// }
 .paragraph{
   font-size: 13px;
   position: relative;
