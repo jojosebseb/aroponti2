@@ -16,7 +16,9 @@
     src: url('../fonts/Lato-Regular.ttf');
 }
 //init end
-
+#parentContainer{
+  overflow: hidden;
+}
 //pallette
 $main-color: #333;
 $container-width: 300px;
@@ -240,14 +242,16 @@ $main-gold: #9b8349;
       background-size: contain;
       // padding: 5% 75px;
       position: absolute;
-      padding: 33px 55px;
+      padding: 40px 50px;
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
       z-index: 5;
     }
     .paragraph{
-      font-size: 8px;
+      font-size: 12px;
+      height: 165px;
+      overflow: scroll;
     }
   }
   .contact-btn{
